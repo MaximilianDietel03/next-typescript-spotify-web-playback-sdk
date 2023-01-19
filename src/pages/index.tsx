@@ -10,7 +10,6 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ token }) => {
-  console.log('render')
   return (
     <AuthProvider token={token}>
       <Head>

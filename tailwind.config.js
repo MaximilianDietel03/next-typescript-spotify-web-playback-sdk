@@ -11,11 +11,7 @@ module.exports = {
       'paper-bottom': "url('../assets/paper-bottom.png')",
       'paper-bottom-transparent': "url('../assets/paper-bottom-transparent.png')",
     },
-    extend: {
-      fontFamily: {
-        typewriter: ['Special Elite'],
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
