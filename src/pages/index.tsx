@@ -1,25 +1,29 @@
 import type { NextPage, GetServerSideProps } from "next";
 import Head from "next/head";
+import { AuthProvider } from "../auth/AuthContext";
+import { Content } from "../components/content";
+import { Header } from "../components/header";
 import { Login } from "../components/login";
-import { WebPlayback } from "../components/web_playback";
 
 type Props = {
   token: string;
 };
 
 const Home: NextPage<Props> = ({ token }) => {
+  console.log('render')
   return (
-    <>
+    <AuthProvider token={token}>
       <Head>
-        <title>Spotify Web Playback Example</title>
+        <title>readingmood</title>
         <meta
           name="description"
-          content="An example app of Spotify Web Playback SDK based on Next.js and Typescript."
+          content="Get AI-suggestions for songs to listen along while reading."
         />
       </Head>
 
-      {token === "" ? <Login /> : <WebPlayback token={token} />}
-    </>
+      {token === "" ? <Login /> : <Content />}
+      <Header />
+    </AuthProvider>
   );
 };
 
