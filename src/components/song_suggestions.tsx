@@ -20,10 +20,10 @@ export const SongSuggestions = () => {
   const [spotifyTracks, setSpotifyTracks] = useState<Spotify.Track[]>([])
   const [_, rerender] = useReducer((x) => x + 1, 0)
 
+  
   useEffect(() => {
     (async () => {
       if (!bookInfo || !genre) return;
-      console.log('fuck')
       setIsLoading(true)
       const spotifyTracks = await suggestSongsToBookAndFindSpotifyTracks(token, bookInfo?.title, bookInfo?.description, genre!)
       setSpotifyTracks(spotifyTracks)

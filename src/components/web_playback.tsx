@@ -29,7 +29,6 @@ export const WebPlayback = () => {
     player?.nextTrack();
   };
 
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://sdk.scdn.co/spotify-player.js";
