@@ -6,12 +6,13 @@ export async function suggestSongsToBook(title: string | undefined, description:
     },
     body: JSON.stringify({ title, description, genre })
   });
-  const { output, error } = await res.json();
+  const { song_suggestions, error } = await res.json();
+
   if (error) {
     console.error(error);
     return Array(10)
   }
-  return output;
+  return song_suggestions;
 }
 
 export async function findSpotifyTrack(spotifyToken: string, track: string) {
