@@ -5,7 +5,7 @@ export const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 flex justify-between p-8">
-      <div className="flex text-white text-2xl font-bold">
+      <div className="flex text-white text-lg sm:text-2xl font-bold">
         <h1>reading</h1><h1 className="text-green-500">mood</h1><h1>.</h1>
       </div>
       {profile ? (
