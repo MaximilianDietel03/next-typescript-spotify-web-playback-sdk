@@ -53,11 +53,20 @@ export const Login: VFC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.6 }}
         onClick={login}
-        className="border-green-500 border-2 rounded-full py-3 px-6 text-xl text-white flex items-center"
+        className="border-green-500 border-2 rounded-full py-3 px-6 text-xl text-white flex items-center mb-10"
       >
         <Image src="/spotify-white.png" alt="spotify logo" width={20} height={20} />
         <p className="ml-2">Login with Spotify</p>
       </motion.button>
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.8 }}
+        className="z-10 text-white text-sm"
+      >
+        Spotify API in development mode. Contact <a href="mailto:maxdietel03@gmail.com" className="text-green-500 hover:underline">me</a> to get access.
+      </motion.p>
     </motion.div>
   );
 };

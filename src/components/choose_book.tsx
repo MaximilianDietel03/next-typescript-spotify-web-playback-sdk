@@ -71,15 +71,6 @@ export const ChooseBook = () => {
         className="z-10 flex w-full max-w-lg bg-white/20 rounded-full py-2 px-6 text-white mb-10 border-2 border-white/30 focus:(outline-none border-white)"
       />
 
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.8 }}
-        className="z-10 text-white text-sm"
-      >
-        Spotify API in development mode. Contact <a href="mailto:maxdietel03@gmail.com" className="text-green-500 hover:underline">me</a> to get access.
-      </motion.p>
-
       <Box className="text-lg text-white w-5/12 h-60">
         {bookInfos.slice(0, 5).map((bookInfo, i) => (
           <button key={`${bookInfo.title}-${i}`} onClick={() => handleChooseBook(bookInfo)} className="flex justify-between p-1 w-full hover:opacity-75">
